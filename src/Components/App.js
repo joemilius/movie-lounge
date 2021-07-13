@@ -1,10 +1,22 @@
 import "../App.css";
+import React from 'react';
+import HomePage from './HomePage';
+import NavBar from './NavBar';
+import WatchList from './WatchList';
+import {Route, Switch} from 'react-router-dom'
 
 function App() {
   return (
     <div className="App">
-      <h1>Hi!</h1>
-      <p>This is cool</p>
+      <NavBar />
+      <Switch>
+        <Route exact path="/watchlist">
+          <WatchList />
+        </Route>
+        <Route exact path="/">
+          <HomePage />
+        </Route>
+      </Switch>
     </div>
   );
 }
