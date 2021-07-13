@@ -4,11 +4,21 @@ import React from "react";
 function MovieCard ( { movie, addMovie } ) {
 
   
-  function handleClick ( e ) {
+  function handleClick ( e) {
     const newMovie = {
       id: '',
       img: e.target.currentSrc,
     }
+    fetch( 'http://localhost:3000/watchList', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify( {
+        id: newMovie.id,
+        img: newMovie.img
+      })
+    })
     addMovie(newMovie);
   }
 

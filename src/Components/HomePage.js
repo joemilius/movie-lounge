@@ -27,7 +27,7 @@ function HomePage({addMovie}) {
             onChange={onChange}>
       </input>
       {results.length > 0 && (
-        <ul>
+        <ul style={{listStyleType: 'none'}}>
           {results.map( movie => (
             <li key={movie.id}>
               <MovieCard movie={movie} addMovie={ addMovie}/>

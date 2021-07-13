@@ -1,6 +1,24 @@
 {
-  "watchList": {
-    "id": 1,
-    "img": "https://www.currytrail.in/wp-content/uploads/2021/01/Movie-Popcorn-Tubs.jpg"
-  }
+  "watchList": [
+    {
+      "id": "G9qo8C4",
+      "img": "https://image.tmdb.org/t/p/w200/wuMc08IPKEatf9rnMNXvIDxqP4W.jpg"
+    },
+    {
+      "id": "aPONMTh",
+      "img": "https://image.tmdb.org/t/p/w200/fECBtHlr0RB3foNHDiCBXeg9Bv9.jpg"
+    },
+    {
+      "id": "fjh-y5P",
+      "img": "https://image.tmdb.org/t/p/w200/sdEOH0992YZ0QSxgXNIGLq1ToUi.jpg"
+    },
+    {
+      "id": "8SuWCix",
+      "img": "https://image.tmdb.org/t/p/w200/hgrKTnY1UJIYJHDv5geHixHVGl3.jpg"
+    },
+    {
+      "id": "6bJDxbb",
+      "img": "https://image.tmdb.org/t/p/w200/y4MBh0EjBlMuOzv9axM4qJlmhzz.jpg"
+    }
+  ]
 }

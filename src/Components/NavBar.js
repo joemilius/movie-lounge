@@ -1,7 +1,5 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import Homepage from "./HomePage";
-import WatchList from "./WatchList";
 
 function NavBar() {
   return (
