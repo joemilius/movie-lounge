@@ -1,18 +1,19 @@
-import React from 'react';
-import {NavLink} from 'react-router-dom';
-import Homepage from './HomePage';
-import WatchList from './WatchList';
+import React from "react";
+import { NavLink } from "react-router-dom";
+import Homepage from "./HomePage";
+import WatchList from "./WatchList";
 
 function NavBar() {
-    return (
-        <div>
-            <NavLink exact to='homepage'>Home</NavLink>
-            <NavLink exact to='/watchlist'>WatchList</NavLink>
-        </div>
-        
-
-    )
-
+  return (
+    <div>
+      <NavLink exact to="/">
+        Home
+      </NavLink>
+      <NavLink exact to="/watchlist">
+        WatchList
+      </NavLink>
+    </div>
+  );
 }
 
-export default NavBar
+export default NavBar;

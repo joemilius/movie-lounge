@@ -1,7 +1,11 @@
-import React from 'react';
+import React from "react";
 
-function WatchListCard(){
-    return
+function WatchListCard({ img }) {
+  return (
+    <div>
+      <img src={img} alt="Movie Poster" />
+    </div>
+  );
 }
 
-export default WatchListCard
+export default WatchListCard;

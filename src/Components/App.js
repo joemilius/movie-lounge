@@ -1,20 +1,26 @@
 import "../App.css";
-import React from 'react';
-import HomePage from './HomePage';
-import NavBar from './NavBar';
-import WatchList from './WatchList';
-import {Route, Switch} from 'react-router-dom'
+import React, { useState } from "react";
+import HomePage from "./HomePage";
+import NavBar from "./NavBar";
+import WatchList from "./WatchList";
+import { Route, Switch } from "react-router-dom";
 
 function App() {
+  const [movies, setMovies] = useState([]);
+
+  function addMovie(movie) {
+    setMovies([...movies, movie]);
+  }
+
   return (
     <div className="App">
       <NavBar />
       <Switch>
         <Route exact path="/watchlist">
-          <WatchList />
+          <WatchList movies={movies} />
         </Route>
         <Route exact path="/">
-          <HomePage />
+          <HomePage addMovie={addMovie} />
         </Route>
       </Switch>
     </div>
