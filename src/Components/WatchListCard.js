@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import Button from "@material-ui/core/Button"
 
 function WatchListCard({ img, id, removeMovie }) {
     const [like, setLike] = useState(false)
@@ -20,11 +21,13 @@ function WatchListCard({ img, id, removeMovie }) {
   }
 
   return (
-    <div>
+    <div style={{display: 'block'}}>
       <img src={img} alt="Movie Poster" />
-      <button onClick={handleLike} style={like ? {background: "green"} : {background: "grey"}}>👍</button>
-      <button onClick={handleDislike} style={dislike ? {background: "red"} : {background: "grey"}}>👎</button>
-      <button onClick={handleClick}>Remove Movie</button>
+      <div>
+        <Button onClick={handleLike} style={like ? {background: "mediumseagreen"} : {background: null}}>👍</Button>
+        <Button onClick={handleDislike} style={dislike ? {background: "crimson"} : {background: null}}>👎</Button>
+        <Button onClick={handleClick}>Remove Movie</Button>
+      </div>
     </div>
   );
 }

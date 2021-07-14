@@ -19,13 +19,14 @@ function HomePage({addMovie}) {
     
   return (
     <div>
-        <h1>HomePage</h1>
+        <h1 style={{marginTop: 100, marginLeft: 20}}>HomePage</h1>
         <input
             type="text"
             placeholder="Search Movies"
             value={query}
             onChange={onChange}>
       </input>
+      <h6 style={{marginLeft: 40}}>Click on a Movie Poster to Add it to Your List</h6>
       {results.length > 0 && (
         <ul style={{listStyleType: 'none'}}>
           {results.map( movie => (

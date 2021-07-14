@@ -12,7 +12,7 @@ function WatchList({ movies, removeMovie }) {
             removeMovie={removeMovie}
           />
         )})
-    return <ul>{displayMovies}</ul>;
+    return <div style={{display: 'flex', flexWrap: 'wrap', marginTop: 100}}>{displayMovies}</div>;
 }
 
 export default WatchList;
