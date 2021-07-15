@@ -24,3 +24,21 @@ body {
   box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.9);
   transform: scale(0.98);
 }
+
+.nav-btn {
+  border-radius: 5px;
+  box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.3);
+}
+
+.nav-btn:active {
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.3);
+  transform: scale(1.1);
+}
+
+.search-movies {
+  margin-top: -105px;
+  margin-left: 15px;
+  font-size: 24px;
+  color: ghostwhite;
+  text-shadow: 2px 2px 5px darkred;
+}

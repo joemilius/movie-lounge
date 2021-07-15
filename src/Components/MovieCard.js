@@ -16,12 +16,9 @@ function MovieCard ( { movie, addMovie } ) {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify( {
-        id: newMovie.id,
-        img: newMovie.img
-      })
+      body: JSON.stringify(newMovie)
     })
-    addMovie(newMovie);
+    addMovie(newMovie)
   }
 
 
@@ -40,7 +37,10 @@ function MovieCard ( { movie, addMovie } ) {
 
       <div>
         <h3>Title: {movie.title}</h3>
-        <h4>Release Date: {movie.release_date.substring(0,4)}</h4>
+        <h4>Release Date:
+
+          {movie.release_date ? movie.release_date.substring( 0, 4 ): '-'}
+        </h4>
       </div>
     </div>
   )

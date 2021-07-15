@@ -8,7 +8,7 @@ import red from "@material-ui/core/colors/red";
 // prettier-ignore
 function NavBar() {
   return (
-    <AppBar style={{ background: red[900] }}>
+    <AppBar style={{ background: red[900]}}>
       <Toolbar>
         <NavLink
           style={{ fontSize: "75px", textDecoration: "none", color: "white" }}
@@ -17,7 +17,7 @@ function NavBar() {
         </NavLink>
         <div style={{ display: "flex", position: "relative", marginLeft: "auto" }}>
           <NavLink style={{ textDecoration: "none" }} exact to="/">
-            <Button
+            <Button className='nav-btn'
               style={{
                 color: "white",
                 background: red["A200"],
@@ -28,7 +28,7 @@ function NavBar() {
             </Button>
           </NavLink>
           <NavLink style={{ textDecoration: "none" }} exact to="/watchlist">
-            <Button style={{ color: "white", background: red["A200"], margin: 4 }}>
+            <Button className='nav-btn' style={{ color: "white", background: red["A200"], margin: 4 }}>
               WatchList
             </Button>
           </NavLink>

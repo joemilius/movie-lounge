@@ -67,33 +67,34 @@ function WatchListCard({ img, id, likeButton, dislikeButton, removeMovie }) {
 
   function handleLike() {
     setLike(!like);
+    setDislike(false);
 
     fetch(`http://localhost:3000/watchList/${id}`, {
-        method: 'PATCH',
-        headers: {
-            'Content-Type' : 'application/json'
-        },
-        body: JSON.stringify({
-            
-            likeButton: !like
-        })
-    })
-
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        likeButton: !like,
+        dislikeButton: false,
+      }),
+    });
   }
 
   function handleDislike() {
     setDislike(!dislike);
+    setLike(false);
 
     fetch(`http://localhost:3000/watchList/${id}`, {
-        method: 'PATCH',
-        headers: {
-            'Content-Type' : 'application/json'
-        },
-        body: JSON.stringify({
-            
-            dislikeButton: !dislike
-        })
-    })
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        likeButton: false,
+        dislikeButton: !dislike,
+      }),
+    });
   }
 
   function handleClick(e) {

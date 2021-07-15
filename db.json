@@ -19,16 +19,10 @@
       "dislikeButton": false
     },
     {
-      "id": "GVrcfdV",
-      "img": "https://image.tmdb.org/t/p/w200/4q2hz2m8hubgvijz8Ez0T2Os2Yv.jpg",
-      "likeButton": false,
-      "dislikeButton": false
-    },
-    {
       "id": "XeoOvBK",
       "img": "https://image.tmdb.org/t/p/w200/nAU74GmpUk7t5iklEp3bufwDq4n.jpg",
       "likeButton": false,
-      "dislikeButton": false
+      "dislikeButton": true
     },
     {
       "id": "Jl_Urls",
@@ -75,6 +69,12 @@
     {
       "id": "259316",
       "img": "https://image.tmdb.org/t/p/w200/h6NYfVUyM6CDURtZSnBpz647Ldd.jpg",
+      "likeButton": false,
+      "dislikeButton": false
+    },
+    {
+      "id": "524251",
+      "img": "https://image.tmdb.org/t/p/w200/2LwamrHAmxqEHsT9JViFJxT08Ek.jpg",
       "likeButton": false,
       "dislikeButton": false
     }

@@ -55,9 +55,10 @@ function HomePage({addMovie}) {
       >
         Click On A Movie Poster To Add It To Your List
       </h5>
-      
-      {results.length > 0 && (
-        <ul style={{listStyleType: 'none'}}>
+
+
+      {results === undefined ? <h5 className='search-movies'>Search Some Movies</h5> : results.length > 0 && (
+        <ul style={{ listStyleType: 'none' }}>
           {results.map( movie => (
             <li key={movie.id}>
               <MovieCard movie={movie} addMovie={ addMovie}/>
@@ -65,6 +66,17 @@ function HomePage({addMovie}) {
           ))}
         </ul>
       )}
+
+          {/* This way gives us an error when we delete all search letters */}
+        {/* {results.length > 0 && (
+        <ul style={{listStyleType: 'none'}}>
+          {results.map( movie => (
+            <li key={movie.id}>
+              <MovieCard movie={movie} addMovie={ addMovie}/>
+            </li>
+          ))}
+        </ul>
+      )} */}
       
     </div>
   );
