@@ -61,7 +61,14 @@ const DislikeButton = withStyles({
   },
 })(Button);
 
-function WatchListCard({ img, id, likeButton, dislikeButton, removeMovie }) {
+function WatchListCard({
+  img,
+  id,
+  likeButton,
+  dislikeButton,
+  removeMovie,
+  onEditMovie,
+}) {
   const [like, setLike] = useState(likeButton);
   const [dislike, setDislike] = useState(dislikeButton);
 
@@ -78,7 +85,9 @@ function WatchListCard({ img, id, likeButton, dislikeButton, removeMovie }) {
         likeButton: !like,
         dislikeButton: false,
       }),
-    });
+    })
+      .then((resp) => resp.json())
+      .then((data) => onEditMovie(data.id, data.likeButton));
   }
 
   function handleDislike() {
@@ -94,7 +103,9 @@ function WatchListCard({ img, id, likeButton, dislikeButton, removeMovie }) {
         likeButton: false,
         dislikeButton: !dislike,
       }),
-    });
+    })
+      .then((resp) => resp.json())
+      .then((data) => onEditMovie(data.id, data.dislikeButton));
   }
 
   function handleClick(e) {

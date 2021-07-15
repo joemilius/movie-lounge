@@ -2,7 +2,7 @@ import React from "react";
 import WatchListCard from "./WatchListCard";
 
 // prettier-ignore
-function WatchList({ movies, removeMovie }) {
+function WatchList({ movies, removeMovie, onEditMovie }) {
     const displayMovies = movies.map((movie, index) => {
     return (
         <WatchListCard
@@ -12,6 +12,7 @@ function WatchList({ movies, removeMovie }) {
             likeButton={movie.likeButton}
             dislikeButton={movie.dislikeButton}
             removeMovie={removeMovie}
+            onEditMovie={onEditMovie}
           />
         )})
   return <ul

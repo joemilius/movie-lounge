@@ -23,12 +23,27 @@ function App() {
     setMovies(updatedMovies);
   }
 
+  function onEditMovie(id, change) {
+    const updatedMovies = movies.map((movie) => {
+      if (movie.id === id) {
+        return { ...movies, change };
+      } else {
+        return movies;
+      }
+    });
+    setMovies(updatedMovies);
+  }
+
   return (
     <div className="App">
       <NavBar />
       <Switch>
         <Route exact path="/watchlist">
-          <WatchList movies={movies} removeMovie={removeMovie} />
+          <WatchList
+            movies={movies}
+            removeMovie={removeMovie}
+            onEditMovie={onEditMovie}
+          />
         </Route>
         <Route exact path="/">
           <HomePage addMovie={addMovie} />
