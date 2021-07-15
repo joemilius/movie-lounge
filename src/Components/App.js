@@ -8,6 +8,8 @@ import { Route, Switch } from "react-router-dom";
 function App() {
   const [movies, setMovies] = useState([]);
 
+  console.log(movies);
+
   useEffect(() => {
     fetch("https://movie-lounge.herokuapp.com/watchlist")
       .then((resp) => resp.json())

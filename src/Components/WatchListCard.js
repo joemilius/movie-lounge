@@ -94,7 +94,7 @@ function WatchListCard({
     setDislike(!dislike);
     setLike(false);
 
-    fetch(`https://movie-lounge.herokuapp.com/watchlist/${id}`, {
+    fetch(`https://movie-lounge.herokuapp.com/watchlist/${img}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
