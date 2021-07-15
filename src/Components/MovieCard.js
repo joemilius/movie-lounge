@@ -6,7 +6,7 @@ function MovieCard ( { movie, addMovie } ) {
   
   function handleClick ( e) {
     const newMovie = {
-      id: '',
+      id: e.target.id,
       img: e.target.currentSrc,
     }
     fetch( 'http://localhost:3000/watchList', {
@@ -28,7 +28,7 @@ function MovieCard ( { movie, addMovie } ) {
       <div>
         {movie.poster_path ? (
           <img className='movie-btn' onClick={handleClick}
-
+            id={movie.id}
             src={`https://image.tmdb.org/t/p/w200${ movie.poster_path }`}
             alt={`${ movie.title } Poster`}
             style={{cursor: 'pointer'}}
