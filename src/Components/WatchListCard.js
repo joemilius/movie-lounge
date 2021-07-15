@@ -94,7 +94,7 @@ function WatchListCard({
     setDislike(!dislike);
     setLike(false);
 
-    fetch(`https://movie-lounge.herokuapp.com/watchlist/${img}`, {
+    fetch(`https://movie-lounge.herokuapp.com/watchlist/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -105,9 +105,8 @@ function WatchListCard({
       }),
     })
       .then((resp) => resp.json())
-      .then((data) => console.log(data));
+      .then((data) => onEditMovie(data.id, data.dislikeButton, data.img));
   }
-  // onEditMovie(data.id, data.dislikeButton);
 
   function handleClick(e) {
     fetch(`https://movie-lounge.herokuapp.com/watchlist/${id}`, {
