@@ -27,7 +27,7 @@ function MovieCard ( { movie, addMovie } ) {
     <div >
       <div>
         {movie.poster_path ? (
-          <img onClick={handleClick}
+          <img className='movie-btn' onClick={handleClick}
 
             src={`https://image.tmdb.org/t/p/w200${ movie.poster_path }`}
             alt={`${ movie.title } Poster`}

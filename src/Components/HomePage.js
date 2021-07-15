@@ -6,6 +6,7 @@ function HomePage({addMovie}) {
   const [ query, setQuery ] = useState( '' );
   const [ results, setResults ] = useState( [] )
   
+
     
 
     function onChange ( e ) {
@@ -19,14 +20,42 @@ function HomePage({addMovie}) {
     
   return (
     <div>
-        <h1 style={{marginTop: 100, marginLeft: 20}}>HomePage</h1>
+      <h1
+        style={{
+          marginTop: 100,
+          marginLeft: 20,
+          
+        }}>
+        <img style={{opacity: '1.2', backgroundSize: 'cover', borderRadius: '15px',}}
+          src="https://3.bp.blogspot.com/-tRH4a36gEOc/VlJcXFoY9bI/AAAAAAAAADo/fRu2BNRW7W4/s1600/Film%2BReel.jpg"
+          alt="film"/>
+
+      </h1>
         <input
+        style={{
+          height: '40px',
+          width: '25%',
+          fontSize: '22pt',
+          padding: '10px',
+          outline: 'none',
+          borderRadius: '7px',
+          boxShadow: '4px 4px 10px rgba(0,0,0,0.20)',
+          opacity: '0.7'
+        }}
             type="text"
             placeholder="Search Movies"
             value={query}
             onChange={onChange}>
       </input>
-      <h6 style={{marginLeft: 40}}>Click on a Movie Poster to Add it to Your List</h6>
+      <h5 style={{
+        marginLeft: '15px', fontSize: '24px',
+        color: 'GhostWhite',
+        textShadow: '2px 2px 5px darkred'
+      }}
+      >
+        Click On A Movie Poster To Add It To Your List
+      </h5>
+      
       {results.length > 0 && (
         <ul style={{listStyleType: 'none'}}>
           {results.map( movie => (
@@ -42,5 +71,3 @@ function HomePage({addMovie}) {
 }
 
 export default HomePage;
-
-// console.log(process.env.REACT_APP_TMDB_API_KEY);
