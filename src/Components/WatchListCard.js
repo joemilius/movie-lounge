@@ -105,8 +105,9 @@ function WatchListCard({
       }),
     })
       .then((resp) => resp.json())
-      .then((data) => onEditMovie(data.id, data.dislikeButton));
+      .then((data) => console.log(data));
   }
+  // onEditMovie(data.id, data.dislikeButton);
 
   function handleClick(e) {
     fetch(`https://movie-lounge.herokuapp.com/watchlist/${id}`, {
