@@ -61,16 +61,39 @@ const DislikeButton = withStyles({
   },
 })(Button);
 
-function WatchListCard({ img, id, removeMovie }) {
-  const [like, setLike] = useState(false);
-  const [dislike, setDislike] = useState(false);
+function WatchListCard({ img, id, likeButton, dislikeButton, removeMovie }) {
+  const [like, setLike] = useState(likeButton);
+  const [dislike, setDislike] = useState(dislikeButton);
 
   function handleLike() {
     setLike(!like);
+
+    fetch(`http://localhost:3000/watchList/${id}`, {
+        method: 'PATCH',
+        headers: {
+            'Content-Type' : 'application/json'
+        },
+        body: JSON.stringify({
+            
+            likeButton: !like
+        })
+    })
+
   }
 
   function handleDislike() {
     setDislike(!dislike);
+
+    fetch(`http://localhost:3000/watchList/${id}`, {
+        method: 'PATCH',
+        headers: {
+            'Content-Type' : 'application/json'
+        },
+        body: JSON.stringify({
+            
+            dislikeButton: !dislike
+        })
+    })
   }
 
   function handleClick(e) {

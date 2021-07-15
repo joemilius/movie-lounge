@@ -8,6 +8,8 @@ function MovieCard ( { movie, addMovie } ) {
     const newMovie = {
       id: e.target.id,
       img: e.target.currentSrc,
+      likeButton: false,
+      dislikeButton: false
     }
     fetch( 'http://localhost:3000/watchList', {
       method: 'POST',

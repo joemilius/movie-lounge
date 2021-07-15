@@ -9,6 +9,8 @@ function WatchList({ movies, removeMovie }) {
             key={index}
             id={movie.id}
             img={movie.img}
+            likeButton={movie.likeButton}
+            dislikeButton={movie.dislikeButton}
             removeMovie={removeMovie}
           />
         )})
