@@ -11,7 +11,7 @@ function MovieCard ( { movie, addMovie } ) {
       likeButton: false,
       dislikeButton: false
     }
-    fetch( 'http://localhost:3000/watchList', {
+    fetch( 'https://movie-lounge.herokuapp.com/watchlist', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

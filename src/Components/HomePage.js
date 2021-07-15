@@ -66,18 +66,6 @@ function HomePage({addMovie}) {
           ))}
         </ul>
       )}
-
-          {/* This way gives us an error when we delete all search letters */}
-        {/* {results.length > 0 && (
-        <ul style={{listStyleType: 'none'}}>
-          {results.map( movie => (
-            <li key={movie.id}>
-              <MovieCard movie={movie} addMovie={ addMovie}/>
-            </li>
-          ))}
-        </ul>
-      )} */}
-      
     </div>
   );
 }

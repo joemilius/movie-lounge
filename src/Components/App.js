@@ -9,7 +9,7 @@ function App() {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/watchList")
+    fetch("https://movie-lounge.herokuapp.com/watchlist")
       .then((resp) => resp.json())
       .then((data) => setMovies(data));
   }, []);

@@ -69,7 +69,7 @@ function WatchListCard({ img, id, likeButton, dislikeButton, removeMovie }) {
     setLike(!like);
     setDislike(false);
 
-    fetch(`http://localhost:3000/watchList/${id}`, {
+    fetch(`https://movie-lounge.herokuapp.com/watchlist/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -85,7 +85,7 @@ function WatchListCard({ img, id, likeButton, dislikeButton, removeMovie }) {
     setDislike(!dislike);
     setLike(false);
 
-    fetch(`http://localhost:3000/watchList/${id}`, {
+    fetch(`https://movie-lounge.herokuapp.com/watchlist/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -98,7 +98,7 @@ function WatchListCard({ img, id, likeButton, dislikeButton, removeMovie }) {
   }
 
   function handleClick(e) {
-    fetch(`http://localhost:3000/watchList/${id}`, {
+    fetch(`https://movie-lounge.herokuapp.com/watchlist/${id}`, {
       method: "DELETE",
     });
     removeMovie(id);
