@@ -87,7 +87,9 @@ function WatchListCard({
       }),
     })
       .then((resp) => resp.json())
-      .then((data) => onEditMovie(data.id, data.likeButton));
+      .then((data) =>
+        onEditMovie(data.id, data.likeButton, data.dislikeButton)
+      );
   }
 
   function handleDislike() {
@@ -105,7 +107,9 @@ function WatchListCard({
       }),
     })
       .then((resp) => resp.json())
-      .then((data) => onEditMovie(data.id, data.dislikeButton, data.img));
+      .then((data) =>
+        onEditMovie(data.id, data.dislikeButton, data.dislikeButton)
+      );
   }
 
   function handleClick(e) {

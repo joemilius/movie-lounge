@@ -57,15 +57,15 @@ function HomePage({addMovie}) {
       </h5>
 
 
-      {results === undefined ? <h5 className='search-movies'>Search Some Movies</h5> : results.length > 0 && (
+      {results ? results.length > 0 && (
         <ul style={{ listStyleType: 'none' }}>
           {results.map( movie => (
             <li key={movie.id}>
-              <MovieCard movie={movie} addMovie={ addMovie}/>
+              <MovieCard movie={movie} addMovie={addMovie} />
             </li>
           ))}
         </ul>
-      )}
+      ) : null }
     </div>
   );
 }

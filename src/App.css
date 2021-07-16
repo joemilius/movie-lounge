@@ -35,10 +35,11 @@ body {
   transform: scale(1.1);
 }
 
-.search-movies {
+/* was the class for our h5 when letters were deleted */
+/* .search-movies {
   margin-top: -105px;
   margin-left: 15px;
   font-size: 24px;
   color: ghostwhite;
   text-shadow: 2px 2px 5px darkred;
-}
+} */

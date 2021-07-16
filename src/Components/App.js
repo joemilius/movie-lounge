@@ -25,12 +25,12 @@ function App() {
     setMovies(updatedMovies);
   }
 
-  function onEditMovie(id, change) {
+  function onEditMovie(id, like, dislike) {
     const updatedMovies = movies.map((movie) => {
       if (movie.id === id) {
-        return { ...movies, change };
+        return { ...movie, likeButton: like, dislikeButton: dislike };
       } else {
-        return movies;
+        return movie;
       }
     });
     setMovies(updatedMovies);
