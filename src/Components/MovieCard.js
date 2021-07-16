@@ -36,10 +36,10 @@ function MovieCard ( { movie, addMovie } ) {
         ) : ( <img
                 onClick={handleClick}
                 id={movie.id}
-                src={'https://aimint.org/ap/wp-content/uploads/sites/18/2016/04/image-placeholder-vertical-683x1024.jpg/w200'}
+                src={'https://aimint.org/ap/wp-content/uploads/sites/18/2016/04/image-placeholder-vertical-683x1024.jpg'}
                 className='movie-btn'
                 alt={`${ movie.title } Poster`}
-                style={{cursor: 'pointer'}}
+                style={{cursor: 'pointer', width: 200}}
               />
             )}
         </div>
