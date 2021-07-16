@@ -39,7 +39,7 @@ function MovieCard ( { movie, addMovie } ) {
                 src={'https://aimint.org/ap/wp-content/uploads/sites/18/2016/04/image-placeholder-vertical-683x1024.jpg'}
                 className='movie-btn'
                 alt={`${ movie.title } Poster`}
-                style={{cursor: 'pointer', width: 200}}
+                style={{cursor: 'pointer', width: 200, height: 299}}
               />
             )}
         </div>

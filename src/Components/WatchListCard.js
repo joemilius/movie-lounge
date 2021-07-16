@@ -119,7 +119,7 @@ function WatchListCard({img, id, likeButton, dislikeButton, removeMovie, onEditM
     <div
       style={{ display: "block", paddingLeft: "30px", paddingBottom: "35px" }}
     >
-      <img src={img} alt="Movie Poster" style={ {boxShadow: "0 3px 5px 2px rgba(0, 0, 0, .3)", borderRadius: '3px'}}/>
+      <img src={img} alt="Movie Poster" style={ {boxShadow: "0 3px 5px 2px rgba(0, 0, 0, .3)", borderRadius: '3px', width: 200, height: 299}}/>
       <div>
         <LikeButton onClick={handleLike}
           style={
