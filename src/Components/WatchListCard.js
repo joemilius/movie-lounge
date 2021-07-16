@@ -69,6 +69,7 @@ function WatchListCard({
   removeMovie,
   onEditMovie,
 }) {
+  // old state
   // const [like, setLike] = useState(likeButton);
   // const [dislike, setDislike] = useState(dislikeButton);
 
