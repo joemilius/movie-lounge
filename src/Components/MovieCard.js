@@ -22,6 +22,7 @@ function MovieCard ( { movie, addMovie } ) {
   }
 
 
+  // prettier-ignore
   return (
     <div >
       <div>
@@ -32,8 +33,16 @@ function MovieCard ( { movie, addMovie } ) {
             alt={`${ movie.title } Poster`}
             style={{cursor: 'pointer'}}
           />
-        ) : (<div className='filler-poster'></div>)}
-      </div>
+        ) : ( <img
+                onClick={handleClick}
+                id={movie.id}
+                src={'https://aimint.org/ap/wp-content/uploads/sites/18/2016/04/image-placeholder-vertical-683x1024.jpg/w200'}
+                className='movie-btn'
+                alt={`${ movie.title } Poster`}
+                style={{cursor: 'pointer'}}
+              />
+            )}
+        </div>
 
       <div>
         <h3>Title: {movie.title}</h3>
