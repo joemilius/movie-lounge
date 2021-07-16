@@ -32,7 +32,7 @@ function MovieCard ( { movie, addMovie } ) {
             alt={`${ movie.title } Poster`}
             style={{cursor: 'pointer'}}
           />
-        ) : (<div style={{background: 'grey'}}></div>)}
+        ) : (<div className='filler-poster'></div>)}
       </div>
 
       <div>
