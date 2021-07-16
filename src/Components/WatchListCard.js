@@ -61,14 +61,8 @@ const DislikeButton = withStyles({
   },
 })(Button);
 
-function WatchListCard({
-  img,
-  id,
-  likeButton,
-  dislikeButton,
-  removeMovie,
-  onEditMovie,
-}) {
+// prettier-ignore
+function WatchListCard({img, id, likeButton, dislikeButton, removeMovie, onEditMovie, }) {
   // old state
   // const [like, setLike] = useState(likeButton);
   // const [dislike, setDislike] = useState(dislikeButton);
@@ -109,7 +103,7 @@ function WatchListCard({
     })
       .then((resp) => resp.json())
       .then((data) =>
-        onEditMovie(data.id, data.dislikeButton, data.dislikeButton)
+        onEditMovie(data.id, data.likeButton, data.dislikeButton)
       );
   }
 
