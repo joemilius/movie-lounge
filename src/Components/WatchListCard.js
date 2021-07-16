@@ -69,12 +69,12 @@ function WatchListCard({
   removeMovie,
   onEditMovie,
 }) {
-  const [like, setLike] = useState(likeButton);
-  const [dislike, setDislike] = useState(dislikeButton);
+  // const [like, setLike] = useState(likeButton);
+  // const [dislike, setDislike] = useState(dislikeButton);
 
   function handleLike() {
-    setLike(!like);
-    setDislike(false);
+    // setLike(!like);
+    // setDislike(false);
 
     fetch(`https://movie-lounge.herokuapp.com/watchlist/${id}`, {
       method: "PATCH",
@@ -82,7 +82,7 @@ function WatchListCard({
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        likeButton: !like,
+        likeButton: !likeButton,
         dislikeButton: false,
       }),
     })
@@ -93,8 +93,8 @@ function WatchListCard({
   }
 
   function handleDislike() {
-    setDislike(!dislike);
-    setLike(false);
+    // setDislike(!dislike);
+    // setLike(false);
 
     fetch(`https://movie-lounge.herokuapp.com/watchlist/${id}`, {
       method: "PATCH",
@@ -103,7 +103,7 @@ function WatchListCard({
       },
       body: JSON.stringify({
         likeButton: false,
-        dislikeButton: !dislike,
+        dislikeButton: !dislikeButton,
       }),
     })
       .then((resp) => resp.json())
@@ -128,7 +128,7 @@ function WatchListCard({
       <div>
         <LikeButton onClick={handleLike}
           style={
-            like
+            likeButton
               ? { background: "mediumseagreen", maxWidth: "4px", minWidth: "1px" }
               : { background: null, maxWidth: "4px", minWidth: "1px" }
           }>
@@ -136,7 +136,7 @@ function WatchListCard({
         </LikeButton>
         <DislikeButton onClick={handleDislike}
           style={
-            dislike
+            dislikeButton
               ? { background: "crimson", maxWidth: "4px", minWidth: "1px" }
               : { background: null, maxWidth: "4px", minWidth: "1px" }
           }>
